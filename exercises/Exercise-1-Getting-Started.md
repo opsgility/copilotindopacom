@@ -15,8 +15,10 @@ You have just arrived at USINDOPACOM headquarters and need to get up to speed qu
 3. Confirm you see the Copilot Chat home screen with the prompt input box.
 
 **Try it:** Also open Copilot Chat from a second entry point:
-- In **Microsoft Edge**, select the Copilot icon in the upper-right toolbar.
 - In **Microsoft Teams**, select the Copilot icon from the left-side menu.
+- In the **Microsoft 365 Copilot mobile app** on your phone (if available).
+
+> **Note (GCC High):** The Copilot icon in the Edge browser sidebar is not available in GCC High environments. Use the browser at m365copilot.com or Teams instead.
 
 > **Question for discussion:** Which access point do you think you would use most frequently in your daily role? Why?
 
@@ -39,6 +41,8 @@ Familiarize yourself with the Copilot Chat interface by locating the following e
 ---
 
 ## Task 1.3 — Your First INDOPACOM Prompt (10 min)
+
+> **Note (GCC High):** Web grounding (Copilot's ability to search the internet for answers) is not enabled by default in GCC High. If your prompts return limited results, your admin may need to enable the "Allow web search in Copilot" policy. If web search is not available, Copilot will still respond using its built-in knowledge, but results may be less current.
 
 Enter the following prompt into Copilot Chat:
 

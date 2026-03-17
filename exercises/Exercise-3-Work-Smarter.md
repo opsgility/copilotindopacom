@@ -161,26 +161,43 @@ Send the email to yourself as a test.
 
 ---
 
-## Task 3.5 — Create the Briefing Deck in PowerPoint (20 min)
+## Task 3.5 — Create the Briefing Deck Content (20 min)
 
-Open **Microsoft PowerPoint** and activate Copilot Chat from the ribbon.
+> **GCC High note:** Copilot's slide-generation features in PowerPoint (auto-creating slides, speaker notes, translations, and presentation summaries) are not currently available in GCC High. Instead, you will use **Copilot Chat** to generate all briefing content, then build the slides manually.
 
-### Part A: Generate Slides
+### Part A: Generate Slide Content in Copilot Chat
+
+Return to **Copilot Chat** (browser or Teams) and enter:
 
 ```
-Create a 6-slide briefing for the Joint Readiness Review at
-USINDOPACOM, 22-23 October 2026. Include:
+I need to build a 6-slide PowerPoint briefing for the Joint Readiness
+Review at USINDOPACOM, 22-23 October 2026. For each slide, provide:
+- A slide title
+- 4-5 bullet points of content
+- Suggested speaker notes (2-3 sentences)
+
+The slides should be:
 Slide 1: Title slide with event name, dates, location
-Slide 2: Purpose and scope
+Slide 2: Purpose and scope of the review
 Slide 3: Current readiness posture overview
 Slide 4: Key readiness metrics (Personnel, Equipment, Training,
          Logistics, Cyber) with Green/Amber/Red status
 Slide 5: Priority actions and recommendations
 Slide 6: Next steps and timeline
-Use a professional, clean design.
+
+Use formal military tone. Use fictitious but realistic content.
 ```
 
-### Part B: Prepare for Questions
+### Part B: Build the Deck
+
+1. Open **Microsoft PowerPoint** and create a new blank presentation.
+2. Copy the content from Copilot's response into your slides — one slide per section.
+3. Apply a clean, professional template or design theme.
+4. Paste the speaker notes into the notes pane for each slide.
+
+### Part C: Prepare for Questions
+
+Back in Copilot Chat:
 
 ```
 What are 5 challenging questions that component commanders might
@@ -188,7 +205,7 @@ ask during this readiness review? For each question, suggest a
 concise talking point response.
 ```
 
-Copy the Q&A to your notes or add as a hidden appendix slide.
+Copy the Q&A into a notes document or add as an appendix slide in your deck.
 
 ---
 
@@ -226,20 +243,6 @@ from the 22 October 2026 event date.
 
 ---
 
-## Task 3.7 — Explore Copilot Agents (5 min)
-
-In Copilot Chat, explore the Agent store:
-
-1. Look for the **Agents** section or search the agent store.
-2. Browse available agents and identify one that could support INDOPACOM operations (e.g., a research agent, project management agent, or document assistant).
-3. Enter this prompt to learn more:
-
-```
-What types of tasks can Copilot Agents automate in a large
-headquarters staff environment? Give me 5 examples relevant to
-a military command's daily operations.
-```
-
 ---
 
 ## Checkpoint
@@ -250,6 +253,5 @@ Before completing the course, confirm you can:
 - [ ] Use Copilot in Word to draft and refine formal military documents
 - [ ] Use Copilot in Excel to analyze data and create visualizations
 - [ ] Use Copilot in Outlook to draft professional correspondence
-- [ ] Use Copilot in PowerPoint to generate briefing slides
+- [ ] Use Copilot Chat to generate briefing content for PowerPoint
 - [ ] Create, edit, and share Copilot Pages for team collaboration
-- [ ] Describe how Copilot Agents can automate headquarters workflows

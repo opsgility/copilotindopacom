@@ -4,7 +4,7 @@
 ---
 
 ## Scenario
-As a staff officer at USINDOPACOM, you write and consume dozens of documents each week — briefings, reports, talking points, and analysis. The quality of what Copilot produces depends entirely on the quality of your prompts. In this exercise you will practice the four key prompt elements (Goal, Context, Source, Expectations) using scenarios you encounter regularly.
+As a staff officer at USINDOPACOM, you write and consume dozens of documents each week — briefings, reports, talking points, and analysis. The quality of what Copilot produces depends entirely on the quality of your prompts. In this exercise you will practice the four key prompt elements (Goal, Context, Source, Expectations), learn to detect and prevent AI hallucinations, and use scenarios you encounter regularly.
 
 ---
 
@@ -50,7 +50,92 @@ Enter your prompt into Copilot Chat and evaluate the response. Refine it at leas
 
 ---
 
-## Task 2.2 — Prompting for Intelligence Summaries (15 min)
+## Task 2.2 — Catching and Preventing Hallucinations (20 min)
+
+AI hallucinations are responses that sound authoritative but contain fabricated facts — invented statistics, nonexistent agreements, or fictional events. In a DOD environment, an undetected hallucination in a Commander's brief or policy memo can have serious consequences. This task teaches you to trigger, detect, and prevent them.
+
+### Part A: Trigger a Hallucination
+
+Enter this prompt that asks for very specific details about something obscure:
+
+```
+What were the specific outcomes and signed agreements from the
+U.S.-Tuvalu Joint Security Dialogue held in March 2025? List the
+agreement names, signatories, and key provisions.
+```
+
+**Examine the response carefully:**
+- Does Copilot present specific agreement names and details confidently?
+- Click on the source links (if any). Do they actually support the claims?
+- Are there any hedging phrases like "reportedly" or "according to sources" that might mask uncertainty?
+
+> **Key insight:** Copilot may generate plausible-sounding agreement names, dates, and provisions that do not exist. The more specific and obscure your question, the higher the hallucination risk.
+
+### Part B: Detect the Hallucination
+
+Now challenge Copilot on its own answer:
+
+```
+I need to verify that information before it goes into a briefing.
+How confident are you in the specific agreement names and provisions
+you listed? Can you confirm each one with a direct source URL?
+```
+
+Observe how Copilot responds. It may:
+- Acknowledge uncertainty
+- Revise or retract specific claims
+- Provide sources that don't actually match the details
+
+### Part C: Prevent Hallucinations with Better Prompts
+
+Now rewrite the original prompt using **anti-hallucination techniques**:
+
+**Technique 1 — Constrain to known sources:**
+```
+Based only on publicly available U.S. Department of State and
+Department of Defense press releases, summarize any known U.S.
+security cooperation activities with Tuvalu. If there is limited
+public information available, say so rather than speculating.
+```
+
+**Technique 2 — Demand source attribution inline:**
+```
+Describe the current state of U.S.-Pacific Island nation security
+partnerships. For each claim, include the source name and date
+in parentheses. Do not include any information you cannot attribute
+to a specific source.
+```
+
+**Technique 3 — Upload an authoritative document instead of relying on web grounding:**
+```
+Using only the attached document, summarize the key bilateral
+security agreements discussed. Do not add information from outside
+this document.
+```
+*(You can test this by uploading the file `assets/HADR-After-Action-Report.md` and asking Copilot to summarize only from that file.)*
+
+### Part D: Apply to a Real-World Scenario
+
+You are drafting a briefing slide that states: *"The U.S. has conducted 47 bilateral exercises with the Philippines since 2015."*
+
+Enter this prompt to fact-check:
+```
+How many bilateral military exercises have the U.S. and Philippines
+conducted together since 2015? Provide only information you can
+attribute to specific sources. If the exact count is not available
+from public sources, state that clearly and give the best available
+estimate with your confidence level.
+```
+
+> **Rule of thumb for INDOPACOM staff:**
+> - **Always check sources** on any specific numbers, dates, names, or quoted statements.
+> - **Never put Copilot output directly into a briefing** without verification — treat it as a first draft from a new analyst who needs to be checked.
+> - **When accuracy is critical, upload the source document** and constrain Copilot to that document rather than relying on web search.
+> - **Add "if you're unsure, say so"** to any prompt where fabricated details would be harmful.
+
+---
+
+## Task 2.3 — Prompting for Intelligence Summaries (15 min)
 
 Practice writing prompts that produce intelligence-style summaries. Enter each prompt and evaluate the output.
 
@@ -65,6 +150,11 @@ Regional Stability. Limit each section to 3-4 sentences. Cite
 recent developments from the past 6 months.
 ```
 
+**After receiving the response, apply what you learned in Task 2.2:**
+- Check at least two of the source links.
+- Are the "recent incidents" actually recent, or is Copilot presenting older events as current?
+- If any claims lack sources, flag them.
+
 **Prompt 2 — Country Profile Brief:**
 
 ```
@@ -72,7 +162,8 @@ Create a one-page country profile brief for the Republic of Palau
 suitable for a military commander's pre-visit read-ahead. Include:
 geography, government type, population, GDP, military forces,
 U.S. bilateral agreements, and key security concerns. Format as
-a structured brief with headers and short paragraphs.
+a structured brief with headers and short paragraphs. For each
+factual claim, note the source.
 ```
 
 **Prompt 3 — Refine with Follow-up:**
@@ -87,7 +178,7 @@ climate-related security risks.
 
 ---
 
-## Task 2.3 — Prompting for Operational Planning (20 min)
+## Task 2.4 — Prompting for Operational Planning (15 min)
 
 ### Scenario: Joint Exercise Planning
 
@@ -134,7 +225,7 @@ risk description, likelihood (Low/Medium/High), impact
 
 ---
 
-## Task 2.4 — Avoiding Common Mistakes (10 min)
+## Task 2.5 — Avoiding Common Mistakes (5 min)
 
 Enter each of these **intentionally flawed prompts**, observe the poor results, then fix them.
 
@@ -159,18 +250,15 @@ What should I know about RIMPAC?
 
 ---
 
-## Task 2.5 — Explore the Prompt Gallery (15 min)
+## Task 2.6 — Explore the Prompt Gallery (5 min)
 
 1. In Copilot Chat, select **"See more"** under the initial prompt suggestions.
 2. Select the **Prompt Gallery** button at the bottom of the list.
-3. Browse the gallery and find prompts in these categories:
-   - **Summarize** — Find a prompt you could adapt for summarizing an operations brief.
-   - **Create** — Find a prompt you could adapt for drafting a memo.
-   - **Analyze** — Find a prompt you could adapt for reviewing exercise data.
-4. **Save** at least one prompt to your saved prompts.
-5. **Edit** the saved prompt to tailor it for your INDOPACOM role. For example, change generic business language to military-appropriate context.
-
-> **Challenge:** Share your best custom prompt with the person next to you. Discuss how you would use it in your daily work.
+3. Browse and find one prompt in each category you could adapt for INDOPACOM work:
+   - **Summarize** — for operations briefs
+   - **Create** — for drafting memos
+   - **Analyze** — for reviewing exercise data
+4. **Save** at least one prompt and **edit** it to tailor for military context.
 
 ---
 
@@ -179,6 +267,8 @@ What should I know about RIMPAC?
 Before moving on, confirm you can:
 
 - [ ] Write prompts using all four key elements (Goal, Context, Source, Expectations)
+- [ ] Trigger, detect, and prevent AI hallucinations
+- [ ] Apply anti-hallucination techniques: source constraining, inline attribution, document upload, and confidence-level requests
 - [ ] Iteratively refine Copilot responses through follow-up prompts
 - [ ] Identify and fix common prompting mistakes
 - [ ] Navigate the Prompt Gallery and save/edit prompts
