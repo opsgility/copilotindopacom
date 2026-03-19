@@ -46,4 +46,3 @@ These files are used throughout the exercises — have them ready before startin
 - Microsoft 365 work account with Copilot Chat access (GCC High: M365 F1/F3/G3/G5 or Office 365 F1/F3/G3/G5)
 - Web browser (Microsoft Edge recommended)
 - Access to Microsoft Teams, Word, Excel, Outlook, and PowerPoint
-- Web grounding enabled by admin ("Allow web search in Copilot" policy)
