@@ -14,7 +14,7 @@ The USINDOPACOM Commander has directed a **Joint Readiness Review (JRR)** to ass
 
 ### Part A: Research Readiness Frameworks
 
-In **Copilot Chat** (browser or Teams), enter:
+In **Copilot Chat**, enter:
 
 ```
 I am a staff action officer at USINDOPACOM planning a Joint Readiness

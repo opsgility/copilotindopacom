@@ -56,7 +56,8 @@ What are three things I should consider when drafting talking points for a gener
 
 After receiving the response:
 
-1. **Check the sources** listed beneath the answer. Click on at least one source link to verify the information.
+1. **Check the sources** listed beneath the answer. Click on at least one source link to verify the information. If you don't see any sources, ask Copilot what it's sources are.
+
 2. **Ask a follow-up question:**
 
 ```
@@ -77,8 +78,7 @@ first column and the primary cooperation area in the second column.
 
 ## Task 1.4 — Verify Enterprise Data Protection (5 min)
 
-1. In the Copilot Chat interface, look for the **shield icon** or **"Protected"** indicator, which confirms Enterprise Data Protection (EDP) is active.
-2. Enter this prompt:
+1. Enter this prompt:
 
 ```
 What security protections are in place for my data when I use
@@ -91,11 +91,3 @@ Microsoft 365 Copilot Chat in my organization?
 
 ---
 
-## Checkpoint
-
-Before moving on, confirm you can:
-
-- [ ] Access Copilot Chat from at least two entry points
-- [ ] Locate all major interface elements
-- [ ] Enter a prompt, review sources, and refine a response
-- [ ] Identify that Enterprise Data Protection is active

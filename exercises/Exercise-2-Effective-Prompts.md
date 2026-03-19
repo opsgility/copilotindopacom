@@ -66,90 +66,177 @@ Enter your prompt into Copilot Chat and evaluate the response. Refine it at leas
 
 ---
 
-## Task 2.2 — Catching and Preventing Hallucinations (20 min)
+## Task 2.2 — Preventing AI Hallucinations (20–25 min)
 
-AI hallucinations are responses that sound authoritative but contain fabricated facts — invented statistics, nonexistent agreements, or fictional events. In a DOD environment, an undetected hallucination in a Commander's brief or policy memo can have serious consequences. This task teaches you to trigger, detect, and prevent them.
+AI systems can **overstate certainty, fill in missing data, or infer details that are not supported by sources**. In a DoD environment, this is especially dangerous — responses may *sound correct* while containing subtle inaccuracies that could mislead decision-makers.
 
-### Part A: Trigger a Hallucination
-
-Enter this prompt that asks for very specific details about something obscure:
-
-```
-What were the specific outcomes and signed agreements from the
-U.S.-Tuvalu Joint Security Dialogue held in March 2025? List the
-agreement names, signatories, and key provisions.
-```
-
-**Examine the response carefully:**
-- Does Copilot present specific agreement names and details confidently?
-- Click on the source links (if any). Do they actually support the claims?
-- Are there any hedging phrases like "reportedly" or "according to sources" that might mask uncertainty?
-
-> **Key insight:** Copilot may generate plausible-sounding agreement names, dates, and provisions that do not exist. The more specific and obscure your question, the higher the hallucination risk.
-
-### Part B: Detect the Hallucination
-
-Now challenge Copilot on its own answer:
-
-```
-I need to verify that information before it goes into a briefing.
-How confident are you in the specific agreement names and provisions
-you listed? Can you confirm each one with a direct source URL?
-```
-
-Observe how Copilot responds. It may:
-- Acknowledge uncertainty
-- Revise or retract specific claims
-- Provide sources that don't actually match the details
-
-### Part C: Prevent Hallucinations with Better Prompts
-
-Now rewrite the original prompt using **anti-hallucination techniques**:
-
-**Technique 1 — Constrain to known sources:**
-```
-Based only on publicly available U.S. Department of State and
-Department of Defense press releases, summarize any known U.S.
-security cooperation activities with Tuvalu. If there is limited
-public information available, say so rather than speculating.
-```
-
-**Technique 2 — Demand source attribution inline:**
-```
-Describe the current state of U.S.-Pacific Island nation security
-partnerships. For each claim, include the source name and date
-in parentheses. Do not include any information you cannot attribute
-to a specific source.
-```
-
-**Technique 3 — Upload an authoritative document instead of relying on web grounding:**
-```
-Using only the attached document, summarize the key bilateral
-security agreements discussed. Do not add information from outside
-this document.
-```
-*(You can test this by uploading the file `assets/HADR-After-Action-Report.md` and asking Copilot to summarize only from that file.)*
-
-### Part D: Apply to a Real-World Scenario
-
-You are drafting a briefing slide that states: *"The U.S. has conducted 47 bilateral exercises with the Philippines since 2015."*
-
-Enter this prompt to fact-check:
-```
-How many bilateral military exercises have the U.S. and Philippines
-conducted together since 2015? Provide only information you can
-attribute to specific sources. If the exact count is not available
-from public sources, state that clearly and give the best available
-estimate with your confidence level.
-```
-
-> **Rule of thumb for INDOPACOM staff:**
-> - **Always check sources** on any specific numbers, dates, names, or quoted statements.
-> - **Never put Copilot output directly into a briefing** without verification — treat it as a first draft from a new analyst who needs to be checked.
-> - **When accuracy is critical, upload the source document** and constrain Copilot to that document rather than relying on web search.
-> - **Add "if you're unsure, say so"** to any prompt where fabricated details would be harmful.
+This task teaches you **prompting best practices that reduce hallucination risk** and how to verify AI-generated content before using it.
 
 ---
+
+### Understanding How Hallucinations Happen
+
+AI hallucinations are not random — they follow predictable patterns. Knowing these patterns helps you write prompts that prevent them:
+
+| Pattern | Example | Why It Happens |
+|---------|---------|----------------|
+| **Fabricated precision** | Inventing exact dollar figures or statistics | The model fills in plausible-sounding details when real data is unavailable |
+| **False attribution** | Paraphrasing presented as a direct quote | The model generates text that *looks like* a quote but is reconstructed from training data |
+| **Gap-filling** | Smoothing over missing dates in a timeline | The model prefers complete-looking answers over honest gaps |
+| **Assumed causation** | Claiming one event caused another without evidence | The model infers causal links from correlation |
+| **Confident uncertainty** | Stating unverified claims without hedging | The model defaults to an authoritative tone regardless of actual confidence |
+
+---
+
+### Part A: Constrain Your Sources (Practice)
+
+The most effective way to prevent hallucinations is to **tell the AI where to get its information** and **what to do when information is unavailable**.
+
+Try this prompt:
+
+```
+Act as a defense analyst. Summarize the current status of the
+U.S.–Philippines Enhanced Defense Cooperation Agreement (EDCA).
+Use only information from official U.S. Department of Defense or
+Department of State public releases. If specific details such as
+dates or figures cannot be confirmed from these sources, state
+that clearly rather than estimating.
+```
+
+**Why this works:**
+- “Use only information from...” constrains the source domain
+- “If specific details cannot be confirmed... state that clearly” gives the model permission to say “I don't know”
+
+> **Tip:** Constraining sources is even more effective when you **upload a document** (PDF, Word, or text) and instruct Copilot to answer only from that document.
+
+---
+
+### Part B: Require Source Attribution (Practice)
+
+When you need factual content, **require the model to cite its sources inline**. This makes unverifiable claims easier to spot.
+
+Try this prompt:
+
+```
+I am a J5 strategic planner at USINDOPACOM. List the major
+multilateral military exercises the U.S. conducts annually in
+the Indo-Pacific region. For each exercise, include the
+participating nations and general purpose. After each entry,
+note the source of the information. If you are unsure about
+any detail, flag it as unverified.
+```
+
+**After receiving the response:**
+- Check at least two of the cited sources — do they exist and support the claims?
+- Did the model flag anything as unverified, or did it present everything with equal confidence?
+
+> **Key insight:** If a model provides no sources or flags nothing as uncertain, treat the entire response with extra scrutiny.
+
+---
+
+### Part C: Allow and Encourage Uncertainty (Practice)
+
+Models default to sounding confident. You can **explicitly invite uncertainty** to get more honest responses.
+
+Try this prompt:
+
+```
+What is known from publicly available, unclassified sources about
+the number of bilateral military exercises the U.S. conducted with
+ASEAN nations between 2020 and 2024? Provide what is well-documented,
+note where data is incomplete, and rate your overall confidence
+(High / Medium / Low) for each claim.
+```
+
+**Compare that to this version without safeguards:**
+
+```
+How many bilateral military exercises did the U.S. conduct with
+ASEAN nations between 2020 and 2024? Break it down by country
+and provide a grand total.
+```
+
+> **Discussion:** How do the two responses differ in tone and specificity? Which would be more dangerous to use in a briefing without verification?
+
+---
+
+### Part D: Verify Quotes and Specific Claims (Practice)
+
+Direct quotes and specific statistics are the **highest-risk content** for hallucination. Use this technique to reduce risk:
+
+```
+Summarize — do not quote — the key themes from recent U.S.
+Department of Defense statements about the Indo-Pacific strategy.
+Provide the approximate date and context for each statement.
+Do not fabricate direct quotes. If you are paraphrasing, say so.
+```
+
+**Why this works:**
+- Asking for summaries instead of quotes avoids the most common hallucination type
+- “Do not fabricate direct quotes” sets a clear boundary
+- “If you are paraphrasing, say so” forces transparency
+
+> **Best practice:** If you need an exact quote, ask the model to find it, then **verify it yourself** before using it in any product.
+
+---
+
+### Part E: Ground Responses in Uploaded Documents
+
+The strongest defense against hallucination is to **provide the source material directly**. When you upload a document, Copilot can answer from it rather than generating from memory.
+
+**Try this workflow:**
+1. Find an unclassified public document (e.g., a DoD fact sheet, a press release from defense.gov, or a GAO report summary)
+2. Upload it to Copilot Chat
+3. Use this prompt pattern:
+
+```
+Using only the attached document, summarize the key findings
+in 4-5 bullet points. Do not add information from outside
+this document. If the document does not address a topic,
+state that explicitly.
+```
+
+> **This is the gold standard** for reducing hallucinations — the model works from your authoritative source rather than generating from its training data.
+
+---
+
+### Prevention Techniques Summary
+
+Use these techniques in combination for the best results:
+
+| Technique | Prompt Language |
+|-----------|----------------|
+| **Constrain sources** | *”Use only information from [specific source domain]”* |
+| **Require attribution** | *”Cite the source for each claim”* |
+| **Allow uncertainty** | *”If unsure, say so and rate your confidence level”* |
+| **Avoid exact quotes** | *”Summarize — do not quote directly”* |
+| **Ground in documents** | *”Answer only from the attached document”* |
+| **Request verification flags** | *”Flag any claims that could not be verified”* |
+
+---
+
+### Operational Guidance
+
+- Treat AI output as a **draft from a junior analyst** — always review before use
+- Verify **all numbers, quotes, and timelines** against authoritative sources
+- Prefer **partial truth over confident error**
+- Require **sources before using content in briefings**
+- When possible, **ground AI in uploaded authoritative documents**
+- Use **multiple prevention techniques together** for highest-risk content
+
+---
+
+### Key Takeaway
+
+You cannot eliminate AI hallucinations entirely, but you can **dramatically reduce them** through careful prompting. The most effective strategies are:
+- **Constraining sources** so the model draws from known, reliable information
+- **Requiring attribution** so unverified claims are easy to spot
+- **Giving the model permission to say “I don't know”** so it does not fill gaps with assumptions
+
+Your job is to **prompt defensively and verify before trusting**.
+
+
+
 
 ## Task 2.3 — Prompting for Intelligence Summaries (15 min)
 
@@ -283,8 +370,8 @@ For this training, all prompts assume you are using Copilot in a web-facing, unc
 Before moving on, confirm you can:
 
 - [ ] Write prompts using all four key elements (Goal, Context, Source, Expectations)
-- [ ] Trigger, detect, and prevent AI hallucinations
-- [ ] Apply anti-hallucination techniques: source constraining, inline attribution, document upload, and confidence-level requests
+- [ ] Apply prompting best practices to prevent AI hallucinations
+- [ ] Use anti-hallucination techniques: source constraining, inline attribution, document upload, and confidence-level requests
 - [ ] Iteratively refine Copilot responses through follow-up prompts
 - [ ] Identify and fix common prompting mistakes
 - [ ] Navigate the Prompt Gallery and save/edit prompts
