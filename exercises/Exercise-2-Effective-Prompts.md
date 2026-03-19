@@ -3,8 +3,23 @@
 
 ---
 
-## Scenario
-As a staff officer at USINDOPACOM, you write and consume dozens of documents each week — briefings, reports, talking points, and analysis. The quality of what Copilot produces depends entirely on the quality of your prompts. In this exercise you will practice the four key prompt elements (Goal, Context, Source, Expectations), learn to detect and prevent AI hallucinations, and use scenarios you encounter regularly.
+## Scenario  
+
+As a staff officer at USINDOPACOM, you write and consume dozens of documents each week — briefings, reports, talking points, and analysis. The quality of what Copilot produces depends entirely on the quality of your prompts. In this exercise you will practice the five key prompt elements
+
+- Role
+- Goal
+- Context
+- Source
+- Expectations
+
+This exercise will help you learn to detect and prevent AI hallucinations, and use scenarios you encounter regularly.
+
+---
+>Note: Sources
+"Vetted Source" or "Constrained Domain." The goal is to force the AI to cite from a specific .mil domain, an uploaded .pdf of a unclassified GAO report, or a specific .gov press release. 
+
+>Note: TRAINING SCENARIO ONLY. All names, dates, and data are fictitious. In real-world planning, you must ensure any information you input is unclassified and approved for use in this tool. When in doubt, ask your security officer.
 
 ---
 
@@ -18,7 +33,7 @@ Enter this **weak prompt** into Copilot Chat:
 Tell me about disaster relief.
 ```
 
-Now enter this **strong prompt** that uses all four elements:
+Now enter this **strong prompt** that uses all five elements:
 
 ```
 I am a J3 operations planner at USINDOPACOM preparing a briefing for
@@ -29,10 +44,11 @@ host-nation agencies. Present the response as 4-5 bullet points with
 a one-sentence explanation for each phase. Use a formal military tone.
 ```
 
-**Identify the four elements in the strong prompt:**
+**Identify the five elements in the strong prompt:**
 
 | Element | What it is in this prompt |
 |---------|--------------------------|
+| **Role** | I am a J3 operations planner at USINDOPACOM preparing a briefing for the Deputy Commander |
 | **Goal** | Summarize the key phases of a multinational HA/DR operation |
 | **Context** | J3 ops planner at INDOPACOM, briefing for Deputy Commander |
 | **Source** | Web-based knowledge about Pacific HA/DR operations |
@@ -42,7 +58,7 @@ a one-sentence explanation for each phase. Use a formal military tone.
 
 ### Part B: Build Your Own
 
-Write a prompt that includes all four elements for this scenario:
+Write a prompt that includes all five elements for this scenario:
 
 > You need to prepare talking points for a visiting delegation from a Pacific Island nation about the benefits of participating in a joint military exercise.
 
@@ -217,10 +233,7 @@ Review on the final day.
 **Step 4 — Risk Assessment:**
 
 ```
-List the top 5 operational risks for a multilateral naval exercise
-in the Philippine Sea during September. For each risk, provide the
-risk description, likelihood (Low/Medium/High), impact
-(Low/Medium/High), and a recommended mitigation. Present as a table.
+Draft a background paragraph on the geopolitical context of the Philippine Sea for a public affairs document, citing only unclassified State Dept. releases
 ```
 
 ---
@@ -249,6 +262,9 @@ What should I know about RIMPAC?
 **Fix it:** Specify your role, what aspect of RIMPAC, and desired format.
 
 ---
+## Assume Unclassified, Public Data Only
+
+For this training, all prompts assume you are using Copilot in a web-facing, unclassified environment. Do not enter any information that is not approved for public release. If you were using a DOD-specific, secure AI, the rules would be different—ask your security officer.
 
 ## Task 2.6 — Explore the Prompt Gallery (5 min)
 
