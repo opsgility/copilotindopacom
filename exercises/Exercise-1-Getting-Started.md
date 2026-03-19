@@ -6,11 +6,15 @@
 ## Scenario
 You have just arrived at USINDOPACOM headquarters and need to get up to speed quickly using Microsoft 365 Copilot Chat as a daily productivity tool. In this exercise you will access Copilot Chat, explore the interface, and verify Enterprise Data Protection is active.
 
+>Note: TRAINING SCENARIO ONLY. All names, dates, and data are fictitious. In real-world planning, you must ensure any information you input is unclassified and approved for use in this tool. When in doubt, ask your security officer.
+
 ---
 
 ## Task 1.1 — Access Copilot Chat (5 min)
 
-1. Open your web browser and navigate to **m365copilot.com**.
+> Note: If you cannot access Copilot, your unit's ISSM or CIO shop controls the licenses. Do not use a personal or commercial version for any work."
+
+1. Open your web browser and navigate to **https://office365.us/chat**.
 2. Sign in with your **work email account**.
 3. Confirm you see the Copilot Chat home screen with the prompt input box.
 
@@ -18,7 +22,7 @@ You have just arrived at USINDOPACOM headquarters and need to get up to speed qu
 - In **Microsoft Teams**, select the Copilot icon from the left-side menu.
 - In the **Microsoft 365 Copilot mobile app** on your phone (if available).
 
-> **Note (GCC High):** The Copilot icon in the Edge browser sidebar is not available in GCC High environments. Use the browser at m365copilot.com or Teams instead.
+> **Note (GCC High):** The Copilot icon in the Edge browser sidebar is not available in GCC High environments. Use the browser at https://www.office365.us/chat or Teams instead.
 
 > **Question for discussion:** Which access point do you think you would use most frequently in your daily role? Why?
 
@@ -47,9 +51,7 @@ Familiarize yourself with the Copilot Chat interface by locating the following e
 Enter the following prompt into Copilot Chat:
 
 ```
-Provide a brief summary of the mission and area of responsibility for
-U.S. Indo-Pacific Command. Include the countries and territories within
-its geographic boundaries. Keep the response under 200 words.
+What are three things I should consider when drafting talking points for a general officer about the humanitarian situation in U.S. Indo-Pacific Command. Keep the response under 200 words.
 ```
 
 After receiving the response:
