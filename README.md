@@ -33,6 +33,14 @@ Supporting files used during the exercises are located in the [`assets/`](assets
 | [HADR-After-Action-Report.md](assets/HADR-After-Action-Report.md) | Exercises 2 & 3 | Fictitious HA/DR after-action report for summarization and anti-hallucination practice |
 | [Theater-Security-Cooperation-Activities.csv](assets/Theater-Security-Cooperation-Activities.csv) | Exercises 2 & 3 | 2026 theater exercise schedule for analysis and planning |
 
+## Before You Begin
+
+1. Download the [CopilotResources.zip](https://github.com/opsgility/copilotindopacom/blob/main/assets/CopilotResources.zip) file.
+2. Save it to your **Desktop**.
+3. Right-click the file and select **Extract All…** to unzip it to your Desktop.
+
+These files are used throughout the exercises — have them ready before starting Exercise 1.
+
 ## Prerequisites
 
 - Microsoft 365 work account with Copilot Chat access (GCC High: M365 F1/F3/G3/G5 or Office 365 F1/F3/G3/G5)
