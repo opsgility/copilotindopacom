@@ -56,7 +56,7 @@ What are three things I should consider when drafting talking points for a gener
 
 After receiving the response:
 
-1. **Check the sources** listed beneath the answer. Click on at least one source link to verify the information. If you don't see any sources, ask Copilot what it's sources are.
+1. **Check the sources:** listed beneath the answer. Click on at least one source link to verify the information. If you don't see any sources, ask Copilot what it's sources are.
 
 2. **Ask a follow-up question:**
 
@@ -85,9 +85,8 @@ What security protections are in place for my data when I use
 Microsoft 365 Copilot Chat in my organization?
 ```
 
-3. Review Copilot's response about EDP protections.
+2. Review Copilot's response about EDP protections.
 
 > **Important:** EDP ensures that your prompts and responses are not used to train AI models, are not visible to other users, and are processed within Microsoft's enterprise security boundary.
 
 ---
-

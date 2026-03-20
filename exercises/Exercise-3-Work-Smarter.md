@@ -50,7 +50,7 @@ Topic, Lead Directorate, and Format (Brief/Discussion/Working Group).
 
 ## Task 3.2 — Create the Read-Ahead Document in Word (25 min)
 
-Open **Microsoft Word** and activate Copilot Chat from the ribbon (Copilot icon, upper right).
+Open **Microsoft Word** and activate Copilot Chat from the ribbon (**Home** > **Copilot**).
 
 ### Part A: Draft the Read-Ahead
 
@@ -99,7 +99,7 @@ Select and copy the best version of each section into your Word document. Save t
 
 ## Task 3.3 — Build the Budget Tracker in Excel (20 min)
 
-Open the provided file **assets/JRR-Budget-Data.csv** in **Microsoft Excel**. Then open the Copilot Chat side pane.
+Open the provided file **assets/JRR-Budget-Data.csv** in **Microsoft Excel**. Then open the Copilot Chat side pane (**Home** > **Copilot**). Attach the **JRR-Budget-Data.csv** file. 
 
 ### Part A: Analyze the Data
 
@@ -114,7 +114,7 @@ You now know which directorates are over/under spend. In Excel:
 
 1. Select the data for Directorate, Budget Allocation, and Actual Spend.
 
-1. Insert a clustered column chart (Insert > Charts > Column Chart).
+1. Insert a clustered column chart (**Insert** > **Insert column or bar chart** > Clustered column Chart).
 
 1. Title it: "JRR Budget: Allocation vs. Actual by Directorate".
 
@@ -135,12 +135,16 @@ Copilot will return a text analysis. Use it to inform your recommendations—but
 In Excel, add a new column titled "Projected EOY Spend". Manually create a simple formula (e.g., =([Average Monthly Spend] * Months Remaining) + Current Spend). Use Copilot to check your logic:
 
 ```
+=((C2+D2+E2)/9)*3+(C2+D2+E2)
+```
+
+```
 If a directorate has spent $45,000 of a $60,000 budget in 6 months,
 what is their projected end-of-year spend if the burn rate continues?
 Show the formula.
 ```
 
-Copilot will show you the math. You then implement it in the spreadsheet. Flag any directorate projected to exceed 100% in a new "Status" column (Green/Amber/Red).
+Copilot will show you the math. You can then implement it in the spreadsheet. You can flag any directorate projected to exceed 100% in a new "Status" column (Green/Amber/Red).
 
 ---
 

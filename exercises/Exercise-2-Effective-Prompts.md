@@ -16,10 +16,10 @@ As a staff officer at USINDOPACOM, you write and consume dozens of documents eac
 This exercise will help you learn to detect and prevent AI hallucinations, and use scenarios you encounter regularly.
 
 ---
->Note: Sources
+>**Note:** Sources
 "Vetted Source" or "Constrained Domain." The goal is to force the AI to cite from a specific .mil domain, an uploaded .pdf of a unclassified GAO report, or a specific .gov press release. 
 
->Note: TRAINING SCENARIO ONLY. All names, dates, and data are fictitious. In real-world planning, you must ensure any information you input is unclassified and approved for use in this tool. When in doubt, ask your security officer.
+>**Note:** TRAINING SCENARIO ONLY. All names, dates, and data are fictitious. In real-world planning, you must ensure any information you input is unclassified and approved for use in this tool. When in doubt, ask your security officer.
 
 ---
 
@@ -254,7 +254,7 @@ recent developments from the past 6 months.
 ```
 
 **After receiving the response, apply what you learned in Task 2.2:**
-- Check at least two of the source links.
+- Check at least two of the source links or ask Copilot for them if necessary.
 - Are the "recent incidents" actually recent, or is Copilot presenting older events as current?
 - If any claims lack sources, flag them.
 
@@ -355,8 +355,10 @@ For this training, all prompts assume you are using Copilot in a web-facing, unc
 
 ## Task 2.6 — Explore the Prompt Gallery (5 min)
 
-1. In Copilot Chat, select **"See more"** under the initial prompt suggestions.
-2. Select the **Prompt Gallery** button at the bottom of the list.
+1. In Copilot Chat, select **New chat**.
+
+2. Select **"See more"** under the initial prompt suggestions.
+3. Select the **Prompt Gallery** button at the bottom of the list.
 3. Browse and find one prompt in each category you could adapt for INDOPACOM work:
    - **Summarize** — for operations briefs
    - **Create** — for drafting memos
