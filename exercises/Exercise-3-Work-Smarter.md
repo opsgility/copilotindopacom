@@ -54,7 +54,7 @@ Open **Microsoft Word** and activate Copilot Chat from the ribbon (**Home** > **
 
 ### Part A: Draft the Read-Ahead
 
-Base the Background section on the key themes from the [uploaded] 2024 National Defense Strategy and [uploaded] 2024 INDOPACOM Strategy documents. In the Copilot Chat side pane within Word, enter:
+Base the Background section on the key themes from the provided strategy documents. First, upload the two PDF files from the **assets** folder into the Copilot Chat side pane: **2024-National-Defense-Strategy.pdf** (the 2022 NDS) and **2024-INDOPACOM-Strategy.pdf** (the USINDOPACOM Posture Statement). Then enter:
 
 ```
 Draft a Joint Readiness Review read-ahead document for USINDOPACOM.
