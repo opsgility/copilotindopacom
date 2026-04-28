@@ -15,8 +15,9 @@ You have just arrived at USINDOPACOM headquarters and need to get up to speed qu
 > Note: If you cannot access Copilot, your unit's ISSM or CIO shop controls the licenses. Do not use a personal or commercial version for any work."
 
 1. Open your web browser and navigate to **https://office365.us/chat**.
-2. Sign in with your **work email account**.
-3. Confirm you see the Copilot Chat home screen with the prompt input box.
+2. or https://chat.genai.army..mil/
+3. Sign in with your **work email account**.
+4. Confirm you see the Copilot Chat home screen with the prompt input box.
 
 **Try it:** Also open Copilot Chat from a second entry point:
 - In **Microsoft Teams**, select the Copilot icon from the left-side menu.
